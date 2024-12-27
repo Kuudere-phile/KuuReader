@@ -6,10 +6,14 @@
 ## Як працює? 
 Під час першого запуску вам запропонує завантажити ffmpeg, який необхідний для KuuReader. Ви можете завантажити через утиліту, або самостійно з https://ffmpeg.org/ та розмістити ffmpeg.exe поруч з цією утилітою.
 Є два способи конвертації.
+
 Перший: перетягуєте зображення на KuuReader_vХ.Х.bat, слідуєте інструкціям, і HTML готовий.
+
 Другий: він такий же, як і перший, але на початку ви запускаєте файл та вказуєте шлях до розділу манґи вручну.
 
 [ЗАВАНТАЖИТИ](https://github.com/Kuudere-phile/KuuReader/releases)
 
 ## Передпоказ
 ![slide](https://raw.githubusercontent.com/Kuudere-phile/KuuReader/refs/heads/main/picture/2024-12-27%2005-52-42.gif)
+
+![slide](https://raw.githubusercontent.com/Kuudere-phile/KuuReader/refs/heads/main/picture/2024-12-27%2006-10-33.gif)
