@@ -6,9 +6,7 @@
 #
 Перед обробкою, не забудьте підписати всі зображення так, щоб вони сортувалися за ім'ям. Наприклад: 01.jpg, 02.jpg, 03.jpg...
 #
-[ЗАВАНТАЖИТИ](https://github.com/Kuudere-phile/KuuReader/releases)
-
-[Завантажити приклад](https://raw.githubusercontent.com/Kuudere-phile/KuuReader/refs/heads/main/test/%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%B8%D0%B9%20%D0%A0%D0%BE%D0%B7%D0%B4%D1%96%D0%BB.html) (ПКМ > Зберегти як...)
+[[ЗАВАНТАЖИТИ](https://github.com/Kuudere-phile/KuuReader/releases)] \ [[Приклад](https://kuudere-phile.github.io/KuuReader/)]
 #
 Мій [Telegram](https://t.me/kuuderephile) та [Discord](https://discord.gg/36yH5WrmN3)
 
