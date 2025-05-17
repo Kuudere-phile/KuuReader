@@ -8,7 +8,7 @@
 #
 Перед обробкою, не забудьте підписати всі зображення так, щоб вони сортувалися за ім'ям. Наприклад: 01.jpg, 02.jpg, 03.jpg...
 #
-[[ЗАВАНТАЖИТИ](https://github.com/Kuudere-phile/KuuReader/releases)] \ [[Приклад](https://kuudere-phile.github.io/Example/)]
+[[ЗАВАНТАЖИТИ](https://github.com/Kuudere-phile/KuuReader/releases)] \ [[Приклад](https://kuudere-phile.github.io/KuuReader/Example/)]
 #
 Мій [Telegram](https://t.me/kuuderephile) та [Discord](https://discord.gg/36yH5WrmN3)
 
