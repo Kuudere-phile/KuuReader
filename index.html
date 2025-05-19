@@ -8,6 +8,35 @@
     <meta name="description" content="Читалка для манґи, манхви, маньхви та вебкоміксів.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        /* Стилі для кнопки "Підтримати проєкт" */
+        .support-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 16px;
+            border-radius: 4px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 20px; /* Додано відступ зверху */
+            margin-bottom: 20px; /* Додано відступ знизу */
+            position: absolute; /* Абсолютне позиціонування */
+            top: 10px;          /* Верхній відступ */
+            right: 10px;        /* Правий відступ */
+        }
+
+        .support-button:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+
+        .support-button span {
+            margin-left: 8px;
+        }
+        /* Загальні стилі */
         body {
             font-family: 'Inter', sans-serif;
             margin: 0;
@@ -141,6 +170,9 @@
     </style>
 </head>
 <body>
+    <a href="https://kuudere-phile.github.io/donate/" target="_blank" class="support-button">
+        <span>Підтримати розробника</span>
+    </a><br>
     <div class="container">
         <h1>KuuReader</h1>
         <p>
