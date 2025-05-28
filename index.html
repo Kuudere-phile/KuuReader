@@ -5,202 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KuuReader</title>
     <meta name="google-site-verification" content="rDem-nSrC_KaMoKwS-HkyKsgSk7WFUXZnNLstY-dHWw" />
-    <meta name="description" content="Читалка для манґи, манхви, маньхви та вебкоміксів.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <meta name="description" content="KuuReader: Ваша утиліта для створення HTML-файлів з манґи, манхви, маньхви та вебкоміксів. Читайте улюблені історії офлайн на будь-якому пристрої (крім Firefox на смартфонах).">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Стилі для кнопки "Підтримати проєкт" */
-        .support-button {
-            display: inline-flex;
-            align-items: center;
-            padding: 8px 16px;
-            border-radius: 4px;
-            background-color: #4CAF50;
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            text-decoration: none;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            margin-top: 20px; /* Додано відступ зверху */
-            margin-bottom: 20px; /* Додано відступ знизу */
-            position: absolute; /* Абсолютне позиціонування */
-            top: 10px;          /* Верхній відступ */
-            right: 10px;        /* Правий відступ */
-        }
-
-        .support-button:hover {
-            background-color: #45a049;
-            transform: translateY(-2px);
-        }
-
-        .support-button span {
-            margin-left: 8px;
-        }
-        /* Загальні стилі */
+        /* Custom styles to ensure Inter font is applied globally */
         body {
             font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #222;
-            line-height: 1.7;
         }
-
-        .container {
-            max-width: 800px;
-            margin: 60px auto;
-            padding: 30px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 30px;
-            text-align: center;
-            font-size: 2.2rem;
-            font-weight: 600;
-        }
-
-        p {
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-            color: #444;
-        }
-
-        h2 {
-            color: #3498db;
-            margin-top: 40px;
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-            font-weight: 600;
-        }
-
-        ul {
-            list-style: none;
-            padding-left: 0;
-            margin-bottom: 25px;
-            font-size: 1.1rem;
-        }
-
-        li::before {
-            content: '•';
-            color: #3498db;
-            margin-right: 10px;
-        }
-
-
-        li {
-            margin-bottom: 12px;
-            color: #444;
-        }
-
-        strong {
-            color: #e74c3c;
-        }
-
-        a {
-            color: #3498db;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-top: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .warning {
-            background-color: #fef0f0;
-            border: 1px solid #fecaca;
-            color: #b91c1c;
-            padding: 16px;
-            border-radius: 6px;
-            margin-bottom: 20px;
-        }
-
-        .download-link {
-            display: inline-block;
-            padding: 12px 25px;
-            background-color: #4CAF50;
-            color: white;
-            font-size: 1.1rem;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            margin-top: 20px;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .download-link:hover {
-            background-color: #45a049;
-            transform: scale(1.05);
-        }
-
-        .example-link {
-            display: inline-block;
-            padding: 12px 25px;
-            background-color: #007BFF;
-            color: white;
-            font-size: 1.1rem;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            margin-top: 20px;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .example-link:hover {
-            background-color: #0056b3;
-            transform: scale(1.05);
-        }
-
     </style>
 </head>
-<body>
-    <a href="https://kuudere-phile.github.io/donate/" target="_blank" class="support-button">
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 text-gray-800 antialiased min-h-screen flex flex-col items-center py-10 px-4 sm:px-6 lg:px-8">
+    <a href="https://kuudere-phile.github.io/kuuderephile/" class="absolute top-4 left-4 sm:top-6 sm:left-6 lg:top-8 lg:left-8 inline-flex items-center px-4 py-2 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+        <span>На головну</span>
+    </a>
+
+    <a href="https://kuudere-phile.github.io/donate/" target="_blank" class="absolute top-4 right-4 sm:top-6 sm:right-6 lg:top-8 lg:right-8 inline-flex items-center px-4 py-2 bg-emerald-600 text-white font-semibold rounded-lg shadow-md hover:bg-emerald-700 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-75">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM15.657 14.243a1 1 0 001.414 1.414l.707-.707a1 1 0 00-1.414-1.414l-.707.707zM11 17a1 1 0 10-2 0v1a1 1 0 102 0v-1zM4.343 14.243a1 1 0 00-1.414 1.414l.707.707a1 1 0 001.414-1.414l-.707-.707zM2 10a1 1 0 011-1h1a1 1 0 110 2H3a1 1 0 01-1-1zM4.343 5.757a1 1 0 00.707-1.707l-.707-.707a1 1 0 00-1.414 1.414l.707.707z" />
+            <path fill-rule="evenodd" d="M10 12a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+        </svg>
         <span>Підтримати розробника</span>
-    </a><br>
-    <div class="container">
-        <h1>KuuReader</h1>
-        <p>
-            Це утиліта, яка створює html файл з розділом манґи, манхви та маньхви, який можна відкрити в будь-якому браузері на PC, та в будь-якому браузері, окрім Firefox, на смартфоні.
+    </a>
+
+    <div class="container bg-white p-6 sm:p-8 md:p-10 lg:p-12 rounded-2xl shadow-xl w-full max-w-3xl mt-16 sm:mt-20 lg:mt-24 mb-10 border border-gray-200">
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-center text-indigo-700 mb-8 leading-tight">
+            KuuReader
+        </h1>
+
+        <p class="text-lg sm:text-xl text-center text-gray-600 mb-8">
+            Це утиліта, яка створює HTML файл з розділом манґи, манхви та маньхви, який можна відкрити в будь-якому браузері на ПК, та в будь-якому браузері, окрім Firefox, на смартфоні.
         </p>
 
-        <h2>Як працює?</h2>
-        <p>
-            Запускаєте утиліту, вибираєте потрібний спосіб конвертації та створюєте html файл, який відкривається будь-яким браузером, за виключенням Firefox у смартфонах (примха розробників Firefox, які заборонили відкривати локальні файли).
+        <h2 class="text-2xl sm:text-3xl font-bold text-indigo-600 mt-10 mb-5 border-b-2 border-indigo-200 pb-2">
+            Як працює?
+        </h2>
+        <p class="text-base sm:text-lg text-gray-700 mb-6">
+            Запускаєте утиліту, вибираєте потрібний спосіб конвертації та створюєте HTML файл, який відкривається будь-яким браузером, за виключенням Firefox у смартфонах (примха розробників Firefox, які заборонили відкривати локальні файли).
         </p>
 
-        <div class="warning">
-            <p>
-                <strong>Зверніть увагу:</strong> SmartScreen (можливо, ще й Захисник; просто додайте до винятків) може відреагувати на файл (.exe), оскільки він не підписаний (тре купляти ліцензцю лол). У вікні, що з'явиться, натискаєте "Докладніше", і тоді з'явиться кнопка "Виконати".
+        <div class="bg-red-50 border border-red-200 text-red-700 p-5 rounded-xl mb-8 shadow-inner">
+            <p class="text-lg font-semibold mb-3 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M8.257 3.099c.765-1.542 2.705-1.542 3.47 0l5.58 11.25c.765 1.542-.317 3.25-2.06 3.25H4.737c-1.743 0-2.825-1.708-2.06-3.25L8.257 3.099zM10 11a1 1 0 100-2 1 1 0 000 2zm1-4a1 1 0 10-2 0v4a1 1 0 102 0V7z" clip-rule="evenodd" />
+                </svg>
+                Зверніть увагу:
             </p>
-            <p>
-                <a href="https://www.virustotal.com/gui/file-analysis/MGRkMDU5N2ZiNzgzNTVlODY1NWM2MTkxOGQ0NTZiZWI6MTczODg0MjM3MA==" target="_blank">VirusTotal</a>
+            <p class="text-base mb-3">
+                <strong class="text-red-800">SmartScreen</strong> (можливо, ще й Захисник; просто додайте до винятків) може відреагувати на файл (<code class="font-mono text-sm bg-red-100 px-1 py-0.5 rounded">.exe</code>), оскільки він не підписаний (тре купляти ліцензцю лол). У вікні, що з'явиться, натискаєте "Докладніше", і тоді з'явиться кнопка "Виконати".
+            </p>
+            <p class="text-base">
+                <a href="https://www.virustotal.com/gui/file-analysis/MGRkMDU5N2ZiNzgzNTVlODY1NWM2MTkxOGQ0NTZiZWI6MTczODg0MjM3MA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline font-medium transition-colors duration-200">
+                    Перевірити на VirusTotal
+                </a>
             </p>
         </div>
 
-        <p>
-            Перед обробкою не забудьте підписати всі зображення так, щоб вони сортувалися за ім'ям. Наприклад: 01.jpg, 02.jpg, 03.jpg...
+        <p class="text-base sm:text-lg text-gray-700 mb-8">
+            Перед обробкою не забудьте підписати всі зображення так, щоб вони сортувалися за ім'ям. Наприклад: <code class="font-mono text-sm bg-gray-100 px-1 py-0.5 rounded">01.jpg</code>, <code class="font-mono text-sm bg-gray-100 px-1 py-0.5 rounded">02.jpg</code>, <code class="font-mono text-sm bg-gray-100 px-1 py-0.5 rounded">03.jpg</code>...
         </p>
 
-        <img src="https://raw.githubusercontent.com/Kuudere-phile/KuuReader/refs/heads/main/picture/2024-12-27%2006-10-33.gif" alt="Попередній перегляд KuuReader">
+        <div class="flex justify-center mb-8">
+            <img src="https://raw.githubusercontent.com/Kuudere-phile/KuuReader/refs/heads/main/picture/2024-12-27%2006-10-33.gif" alt="Попередній перегляд KuuReader" class="rounded-xl shadow-lg border border-gray-200 max-w-full h-auto object-cover">
+        </div>
 
-        <a href="https://github.com/Kuudere-phile/KuuReader/releases" class="download-link">Завантажити KuuReader</a>
-        <a href="https://kuudere-phile.github.io/KuuReader/Example/" class="example-link" target="_blank">Приклад роботи</a>
+        <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+            <a href="https://github.com/Kuudere-phile/KuuReader/releases" class="download-link flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-bold text-lg rounded-xl shadow-lg hover:bg-blue-700 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L10 11.586l2.293-2.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v7a1 1 0 11-2 0V3a1 1 0 011-1z" clip-rule="evenodd" />
+                </svg>
+                Завантажити KuuReader
+            </a>
+            <a href="https://kuudere-phile.github.io/KuuReader/Example/" class="example-link flex items-center justify-center px-6 py-3 bg-purple-600 text-white font-bold text-lg rounded-xl shadow-lg hover:bg-purple-700 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-75" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                    <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
+                </svg>
+                Приклад роботи
+            </a>
+        </div>
     </div>
 </body>
 </html>
