@@ -11,8 +11,10 @@
             font-family: 'Inter', sans-serif;
             background-color: #f3f4f6; /* Світло-сірий фон */
         }
+        /* Змінено: Максимальна ширина контейнера та адаптивний відступ */
         .container {
             max-width: 960px; /* Максимальна ширина контейнера */
+            /* На мобільних пристроях відступів немає, на ПК буде p-6 */
         }
         .image-grid {
             display: flex;
@@ -82,8 +84,8 @@
         }
     </style>
 </head>
-<body class="p-6">
-    <div class="container mx-auto bg-white p-8 rounded-xl shadow-lg">
+<body class="">
+    <div class="container mx-auto bg-white p-8 rounded-xl shadow-lg md:p-6">
         <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">KuuReader-Zip</h1>
 
         <div class="mb-6 p-4 bg-blue-100 border border-blue-200 text-blue-800 rounded-lg">
